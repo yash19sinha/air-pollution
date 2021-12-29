@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("https://i.pinimg.com/originals/21/f6/24/21f62453ce92003ba18cf9708d92551d.png");
+  
+  filter: blur(3px);
+  -webkit-filter: blur(4px);
+  height: 100%; 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg-text {
+
+  color: white;
+  font-weight: bold;
+  border: 5px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  
+  padding: 90px;
+  
+}
+nav {
+  float: left;
+  width: 50%;
+  height: 450px; 
+  background: #ccc;
+  
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  
+  height: 450px;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+li{
+  font-size: 20px;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+</style>
+</head>
+<body>
+    
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+    <h1 style="font-size:45px"><u>Benefits of air pollution information and forecasting</u></h1>
+    <p style="font-size:23px">Air pollution forecasting is a worthwhile investment on multiple levels - individual, community, 
+        national and global. Accurate forecasting helps people plan ahead, decreasing the effects on health 
+        and the costs associated</p>
+    <p style="font-size:23px">If people are aware of variations in the quality of the air they breathe, the effect of
+         pollutants on health as well as concentrations likely to cause adverse effects and actions to curtail
+          pollution. Furthermore, there is a greater likelihood of motivating changes in both individual behaviour 
+          and public policy, as people want air quality information </p>
+    <p style="font-size:23px">Such awareness has the potential to create a cleaner environment and a healthier
+         population. Governments also make use of early forecasting to establish procedures to reduce the
+          severity of local pollution levels. </p>
+      
+</div>
+<div style="background-color: rgb(88, 43, 92); color:white;"><br>
+  <h1 style="font-size:45px; background-color:black;"><u>Aim</u></h1>
+  <p style="font-size: 25px;padding-left: 50px;padding-right: 50px;">The main aim of this project is to bring air pollution under control. As
+    air pollution is one of the biggest problems of the country at present .With this 
+    project we are trying to help both the government as well as citizens by predicting
+     air pollution. Air pollution can help in many ways it can help in taking precautions
+      and in taking future decisions.</p>
+  <h1 style="font-size:45px; background-color:black;"><u>Can air pollution be predicted?</u></h1>
+  <section>
+      <nav>
+         <img src="https://www.euractiv.com/wp-content/uploads/sites/2/2018/12/shutterstock_1036209484-800x450.jpg">
+      </nav>
+      <article>
+        <h2>Accuracy in air quality forecasting</h2>
+         <p style="font-size:20px">When predicting air quality, there are many variables to take into account,
+             some of which are quite unpredictable. For example, Beijing’s authorities sometimes order coal
+              plants and factories to close and ban a portion of the city’s millions of registered vehicles 
+              from operating</p>
+
+         <p style="font-size:20px">Air pollution levels are strongly correlated with local weather 
+            conditions11 and nearby pollution emissions. However, long-range transport of pollution
+             - through strong winds - is also a significant influencing factor and must be taken
+              into consideration when forecasting local AQI readings.</p>
+            
+        <p style="font-size:20px">Predicting air quality, therefore, not only involves the difficulties
+             of weather forecasting, it also requires data on and knowledge of</p> 
+      </article>
+
+  </section>
+  <section>
+      <article style="background-color: black;">
+        <h2>Difficulties of Weather Forecasting</h2>
+        <ul>
+            <li>Local pollutant concentrations and emissions.</li>
+           <li>Pollutant concentrations and emissions from distant locations. </li>
+           <li>Movements and possible transformations of pollutants</li>
+           <li>Prevailing winds</li>
+         </ul>
+      </article>
+      <nav>
+          <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/avg2015-2019_no2_print_w_colorbar_date_print.jpg" width="100%" height="100%">
+      </nav>
+
+  </section>
+  <br><br>
+
+  <div class="row" >
+    <div class="column" style="background-color:rgb(88, 43, 92);">
+      <h2>Classification and regression tree (CART)</h2>
+      <p style="font-size: 20px;">It is designed to classify data into dissimilar groups. Software identifies variables that 
+          correlate with ambient pollution levels. The data is used to forecast concentrations 
+          based on weather conditions and correlated pollutant concentrations..</p><br>
+          <center><img src="https://insightimi.files.wordpress.com/2020/03/intro.jpg" width="450px" height="350px"></center>
+    </div>
+    <div class="column" style="background-color:black;">
+      <h2>Regression analysis</h2>
+      <p style="font-size: 20px;">estimates relationships between variables. By analyzing historical data sets, 
+        associations are made between pollution levels and meteorological data variables.
+        The result is an equation that can be used to forecast future pollution levels.</p><br>
+        <center> <img src="https://backlog.com/wp-blog-app/uploads/2019/12/Nulab-Gradient-descent-for-linear-regression-using-Golang-Blog.png" width="450px" height="350px"></center>
+    </div>
+    <div class="column" style="background-color:rgb(88, 43, 92);">
+      <h2>Artificial neural networks</h2>
+      <p style="font-size: 20px;">use adaptive learning and pattern recognition techniques. Computer-based algorithms 
+          are designed to simulate the human brain’s capability for pattern recognition.
+           This is debatably the most suited method for forecasting pollution due to its
+            multi-dimensional approach.</p>
+            <center><img src="https://www.researchgate.net/profile/Md-Abdullah-Nasim/publication/334947653/figure/fig15/AS:787915051397123@1564864995365/A-simple-Artificial-Neural-Network-86.ppm" width="450px" height="350px"></center>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+</body>
+</html>
+

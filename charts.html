@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Charts
+         </title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    </head>
+    <style>
+        body{
+            padding-top: 30px;
+            background-color:#F5E8C7;
+        }
+    </style>
+    
+    <body>
+        <div class="container" style="align-content: center;">
+            <h1 class="font-weight-bold pt-20" style="background-color: #6F4C5B;color: white;">Select Your City</h1>
+            <div class="form-group">
+            
+            <select class="city form-control form-control-lg" id="select_city">
+                <option value="">--select--</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="lucknow">Lucknow</option>
+            </select>
+        </div>
+        <div style="background-color: white; width:100%;max-width:800px;">
+        <canvas id="mydelhi" style="width:100%;max-width:800px; display: none"></canvas>
+        <canvas id="mymumbai" style="width:100%;max-width:800px; display: none"></canvas>
+        <canvas id="mylucknow" style="width:100%;max-width:800px; display: none"></canvas>
+        <canvas id="mykolkata" style="width:100%;max-width:800px; display: none"></canvas>
+    </div>
+    </div>
+
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#select_city").change(function(){
+                $val = $(this).val();
+                console.log($val);
+
+                if(($val)=='mumbai'|| $val=='kolkata'|| $val=="lucknow")
+                {
+                    $("#mydelhi").hide();
+                }
+                else{
+                    $("#mydelhi").show();
+                }
+                if(($val)=='delhi'|| $val=='kolkata'|| $val=="lucknow")
+                {
+                    $("#mymumbai").hide();
+                }
+                else{
+                    $("#mymumbai").show();
+                }
+                if(($val)=='delhi'|| $val=='kolkata'|| $val=="mumbai")
+                {
+                    $("#mylucknow").hide();
+                }
+                else{
+                    $("#mylucknow").show();
+                }
+                if(($val)=='delhi'|| $val=='lucknow'|| $val=="mumbai")
+                {
+                    $("#mykolkata").hide();
+                }
+                else{
+                    $("#mykolkata").show();
+                }
+            });
+            
+
+        });
+        
+        
+            var xValues = ["PM2.5", "PM10", "O3", "NO2"];
+            var yValues = [216, 327, 10, 65];
+            var barColors = ["red", "green","blue","orange"];
+
+            new Chart("mydelhi", {
+            type: "horizontalBar",
+            data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                display: true,
+                text: "Concentration of pollutants"
+                },
+                scales: {
+                xAxes: [{ticks: {min: 1, max:350}}]
+                }
+            }
+            });
+
+            //mumbai
+            var xValues = ["PM2.5", "PM10", "O3", "SO2"];
+            var yValues = [83, 147, 15, 2];
+            var barColors = ["red", "green","blue","orange"];
+
+            new Chart("mymumbai", {
+            type: "horizontalBar",
+            data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                display: true,
+                text: "Concentration of pollutants"
+                },
+                scales: {
+                xAxes: [{ticks: {min: 1, max:160}}]
+                }
+            }
+            });
+            
+            //lucknow
+            var xValues = ["PM2.5", "PM10", "NO2", "SO2"];
+            var yValues = [240, 114, 82, 41];
+            var barColors = ["red", "green","blue","orange"];
+
+            new Chart("mylucknow", {
+            type: "horizontalBar",
+            data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                display: true,
+                text: "Concentration of pollutants"
+                },
+                scales: {
+                xAxes: [{ticks: {min: 1, max:250}}]
+                }
+            }
+            });
+            var xValues = ["PM2.5", "PM10", "NO2", "SO2"];
+            var yValues = [185, 136, 10, 6];
+            var barColors = ["red", "green","blue","orange"];
+
+            new Chart("mykolkata", {
+            type: "horizontalBar",
+            data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                display: true,
+                text: "Concentration of pollutants"
+                },
+                scales: {
+                xAxes: [{ticks: {min: 1, max:200}}]
+                }
+            }
+            });
+
+
+
+    </script>
+</html>
+
+
+
